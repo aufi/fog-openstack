@@ -59,6 +59,10 @@ module Fog
     autoload :OpenStack, File.expand_path('../key_manager/openstack', __FILE__)
   end
 
+  module Messaging
+    autoload :OpenStack, File.expand_path('../messaging/openstack', __FILE__)
+  end
+
   module Metering
     autoload :OpenStack, File.expand_path('../metering/openstack', __FILE__)
   end
@@ -120,6 +124,7 @@ module Fog
     service(:image,              'Image')
     service(:introspection,      'Introspection')
     service(:key,                'KeyManager')
+    service(:messaging,          'Messaging')
     service(:metering,           'Metering')
     service(:metric,             'Metric')
     service(:monitoring,         'Monitoring')
